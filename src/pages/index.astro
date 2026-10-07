@@ -1,16 +1,520 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<Navigation />
+
+	<main>
+		<Hero />
+
+<section id="about" class="content-section about-section">
+	<div class="section-heading">
+		<span>01.</span>
+		<h2>About</h2>
+	</div>
+
+	<div class="about-grid">
+		<div class="about-text">
+			<p>
+				I'm an Information Systems undergraduate at the
+				<strong>University of Colombo School of Computing</strong>,
+				building a career at the intersection of business analysis
+				and software engineering.
+			</p>
+
+			<p>
+				I enjoy understanding how systems and processes work,
+				identifying problems, and translating business requirements
+				into practical technical solutions.
+			</p>
+
+			<p>
+				My experience spans requirements engineering, process
+				mapping, user stories, acceptance criteria, Agile
+				collaboration, and software development.
+			</p>
+
+			<p>
+				Currently, I'm working on <strong>GridX</strong>, a
+				peer-to-peer energy trading platform, where I contribute
+				as a Business Analyst, Software Engineer, and Project
+				Coordinator.
+			</p>
+		</div>
+
+		<div class="about-photo">
+			<div class="photo-frame">
+				<img
+					src="/profile.jpeg"
+					alt="Vidurshan Ponmudy"
+				/>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<section id="experience" class="content-section experience-section">
+	<div class="section-heading">
+		<span>02.</span>
+		<h2>Experience</h2>
+	</div>
+
+	<div class="experience-list">
+		<article class="experience-item">
+			<div class="experience-header">
+				<div>
+					<h3>Customer Service Representative</h3>
+					<p class="experience-company">Dialog Axiata</p>
+				</div>
+
+				<span class="experience-date">Professional Experience</span>
+			</div>
+
+			<ul class="experience-details">
+				<li>
+					Handled customer enquiries across Dialog TV, broadband,
+					and prepaid and postpaid services.
+				</li>
+				<li>
+					Investigated customer issues and communicated appropriate
+					solutions clearly and effectively.
+				</li>
+				<li>
+					Developed strong communication, problem-solving, and
+					customer-handling skills through direct customer interaction.
+				</li>
+			</ul>
+
+			<div class="experience-tags">
+				<span>Customer Service</span>
+				<span>Problem Solving</span>
+				<span>Communication</span>
+			</div>
+		</article>
+	</div>
+</section>
+
+		<section id="projects" class="content-section projects-section">
+	<div class="section-heading">
+		<span>03.</span>
+		<h2>Projects</h2>
+	</div>
+
+	<!-- Featured Project -->
+	<article class="featured-project">
+		<div class="featured-project-content">
+			<p class="project-label">Featured Project</p>
+
+			<h3>GridX</h3>
+
+			<h4>Peer-to-Peer Energy Trading Platform</h4>
+
+			<p class="project-description">
+				A peer-to-peer energy trading platform designed to connect
+				prosumers and consumers through a simulated energy marketplace.
+				The platform uses price-time matching to facilitate energy
+				trading while providing market and transaction management
+				features.
+			</p>
+
+			<p class="project-role">
+				<strong>My role:</strong>
+				Business Analyst · Software Engineer · Project Coordinator
+			</p>
+
+			<div class="project-tags">
+				<span>Business Analysis</span>
+				<span>TypeScript</span>
+				<span>Node.js</span>
+				<span>PostgreSQL</span>
+				<span>gRPC</span>
+				<span>Docker</span>
+			</div>
+
+			<div class="project-links">
+				<a href="#" aria-label="View GridX project">
+					View project <span>↗</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="featured-project-visual">
+	<div class="gridx-dashboard">
+		<div class="gridx-topbar">
+			<div>
+				<span class="gridx-brand">GRIDX</span>
+				<span class="gridx-market">ENERGY MARKET</span>
+			</div>
+			<span class="gridx-status">
+				<span></span>
+				MARKET OPEN
+			</span>
+		</div>
+
+		<div class="gridx-stats">
+			<div class="gridx-stat">
+				<span>ENERGY TRADED</span>
+				<strong>1,284.50</strong>
+				<small>kWh</small>
+			</div>
+
+			<div class="gridx-stat">
+				<span>MARKET PRICE</span>
+				<strong>0.082</strong>
+				<small>credits / kWh</small>
+			</div>
+
+			<div class="gridx-stat">
+				<span>ACTIVE ORDERS</span>
+				<strong>47</strong>
+				<small>orders</small>
+			</div>
+		</div>
+
+		<div class="gridx-market-grid">
+			<div class="gridx-chart">
+				<div class="gridx-panel-heading">
+					<span>MARKET ACTIVITY</span>
+					<span>24H</span>
+				</div>
+
+				<div class="gridx-chart-area">
+					<div class="chart-line"></div>
+					<div class="chart-point point-one"></div>
+					<div class="chart-point point-two"></div>
+					<div class="chart-point point-three"></div>
+					<div class="chart-point point-four"></div>
+				</div>
+			</div>
+
+			<div class="gridx-orderbook">
+				<div class="gridx-panel-heading">
+					<span>ORDER BOOK</span>
+					<span>PRICE / kWh</span>
+				</div>
+
+				<div class="order-row sell">
+					<span>SELL</span>
+					<strong>0.091</strong>
+					<small>120</small>
+				</div>
+
+				<div class="order-row sell">
+					<span>SELL</span>
+					<strong>0.087</strong>
+					<small>85</small>
+				</div>
+
+				<div class="order-row current">
+					<span>LAST</span>
+					<strong>0.082</strong>
+					<small>64</small>
+				</div>
+
+				<div class="order-row buy">
+					<span>BUY</span>
+					<strong>0.079</strong>
+					<small>92</small>
+				</div>
+
+				<div class="order-row buy">
+					<span>BUY</span>
+					<strong>0.075</strong>
+					<small>146</small>
+				</div>
+			</div>
+		</div>
+
+		<div class="gridx-footer">
+			<span>PRICE-TIME MATCHING</span>
+			<span>SIMULATED ENERGY MARKET</span>
+		</div>
+	</div>
+</div>
+	</article>
+
+	<!-- Other Projects -->
+<div class="project-grid">
+
+	<article class="project-card">
+		<div class="project-card-top">
+			<span class="project-number">01</span>
+			<a
+				href="#"
+				aria-label="View AutoNexus project"
+				class="project-arrow"
+			>
+				↗
+			</a>
+		</div>
+
+		<div class="project-card-content">
+			<p class="project-type">BUSINESS ANALYSIS · SYSTEM DEVELOPMENT</p>
+
+			<h3>AutoNexus</h3>
+
+			<h4>Vehicle Service Management System</h4>
+
+			<p>
+				A vehicle service management system designed to streamline
+				appointments, work orders, mechanic assignment, service
+				tracking, and operational workflows.
+			</p>
+
+			<div class="project-tags">
+				<span>Business Analysis</span>
+				<span>PHP</span>
+				<span>MariaDB</span>
+				<span>HTML/CSS/JS</span>
+			</div>
+		</div>
+	</article>
+
+
+	<article class="project-card">
+		<div class="project-card-top">
+			<span class="project-number">02</span>
+
+			<a
+				href="https://github.com/VMANFdo/Middleware-Architecture-for-SwiftLogistics-"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="View SwiftLogistics project"
+				class="project-arrow"
+			>
+				↗
+			</a>
+		</div>
+
+		<div class="project-card-content">
+			<p class="project-type">SOFTWARE ENGINEERING · ARCHITECTURE</p>
+
+			<h3>SwiftLogistics</h3>
+
+			<h4>Middleware Architecture</h4>
+
+			<p>
+				A middleware architecture project developed around
+				service integration and communication within a
+				logistics-oriented software system.
+			</p>
+
+			<div class="project-tags">
+				<span>Middleware</span>
+				<span>Architecture</span>
+				<span>APIs</span>
+			</div>
+		</div>
+	</article>
+
+
+	<article class="project-card">
+		<div class="project-card-top">
+			<span class="project-number">03</span>
+
+			<a
+				href="#"
+				aria-label="View Zovro project"
+				class="project-arrow"
+			>
+				↗
+			</a>
+		</div>
+
+		<div class="project-card-content">
+			<p class="project-type">SOFTWARE ENGINEERING</p>
+
+			<h3>Zovro</h3>
+
+			<h4>Software Project</h4>
+
+			<p>
+				A software engineering project focused on designing
+				and implementing a practical digital solution with
+				a user-centered approach.
+			</p>
+
+			<div class="project-tags">
+				<span>Software Engineering</span>
+				<span>System Design</span>
+			</div>
+		</div>
+	</article>
+
+</div>
+</section>
+
+		<section id="skills" class="content-section skills-section">
+	<div class="section-heading">
+		<span>04.</span>
+		<h2>Skills</h2>
+	</div>
+
+	<div class="skills-intro">
+		<p>
+			A combination of business analysis, software engineering,
+			and project coordination skills developed through academic,
+			project, and professional experience.
+		</p>
+	</div>
+
+	<div class="skills-grid">
+
+		<article class="skill-group skill-group-primary">
+			<div class="skill-group-header">
+				<span class="skill-number">01</span>
+				<span class="skill-label">CORE</span>
+			</div>
+
+			<h3>Business Analysis</h3>
+
+			<p class="skill-description">
+				Translating business needs into structured requirements
+				and practical system solutions.
+			</p>
+
+			<div class="skill-list">
+				<span>Requirements Elicitation</span>
+				<span>Requirements Engineering</span>
+				<span>User Stories</span>
+				<span>Acceptance Criteria</span>
+				<span>Process Mapping</span>
+				<span>Workflow Analysis</span>
+				<span>Functional Specifications</span>
+				<span>UML & BPMN</span>
+			</div>
+		</article>
+
+
+		<article class="skill-group">
+			<div class="skill-group-header">
+				<span class="skill-number">02</span>
+				<span class="skill-label">TECHNICAL</span>
+			</div>
+
+			<h3>Software Engineering</h3>
+
+			<p class="skill-description">
+				Building software solutions and implementing technical
+				requirements across different application layers.
+			</p>
+
+			<div class="skill-list">
+				<span>TypeScript / JavaScript</span>
+				<span>Python</span>
+				<span>C / C++</span>
+				<span>React</span>
+				<span>Node.js</span>
+				<span>PHP</span>
+				<span>HTML / CSS</span>
+				<span>REST & gRPC</span>
+			</div>
+		</article>
+
+
+		<article class="skill-group">
+			<div class="skill-group-header">
+				<span class="skill-number">03</span>
+				<span class="skill-label">DATA & SYSTEMS</span>
+			</div>
+
+			<h3>Data & Infrastructure</h3>
+
+			<p class="skill-description">
+				Working with databases, development infrastructure,
+				APIs, and distributed application environments.
+			</p>
+
+			<div class="skill-list">
+				<span>PostgreSQL</span>
+				<span>MySQL / MariaDB</span>
+				<span>Docker</span>
+				<span>Kafka</span>
+				<span>Git & GitHub</span>
+				<span>Linux</span>
+				<span>API Integration</span>
+				<span>Distributed Systems</span>
+			</div>
+		</article>
+
+
+		<article class="skill-group">
+			<div class="skill-group-header">
+				<span class="skill-number">04</span>
+				<span class="skill-label">WORKFLOW</span>
+			</div>
+
+			<h3>Tools & Methodologies</h3>
+
+			<p class="skill-description">
+				Tools and practices used to plan, document, collaborate,
+				and deliver software projects.
+			</p>
+
+			<div class="skill-list">
+				<span>Agile / Scrum</span>
+				<span>Jira</span>
+				<span>Confluence</span>
+				<span>Figma</span>
+				<span>VS Code</span>
+				<span>GitHub</span>
+				<span>Sprint Planning</span>
+				<span>Project Coordination</span>
+			</div>
+		</article>
+
+	</div>
+</section>
+
+		<section id="education" class="content-section education-section">
+	<div class="section-heading">
+		<span>05.</span>
+		<h2>Education</h2>
+	</div>
+
+	<div class="education-list">
+		<!-- University -->
+		<article class="education-item">
+			<div class="education-header">
+				<div>
+					<h3>Bachelor of Information Systems</h3>
+					<p class="education-institution">
+						University of Colombo School of Computing
+					</p>
+				</div>
+
+				<span class="education-date">2023 — Present</span>
+			</div>
+
+			<p class="education-description">
+				An Information Systems degree focused on software engineering,
+				business analysis, systems analysis and design, databases,
+				and information technology.
+			</p>
+		</article>
+
+		<!-- School -->
+		<article class="education-item">
+			<div class="education-header">
+				<div>
+					<h3>G.C.E. Advanced Level</h3>
+					<p class="education-institution">
+						Hindu College Colombo
+					</p>
+				</div>
+
+				<span class="education-date">2022</span>
+			</div>
+
+			<p class="education-description">
+				Completed the G.C.E. Advanced Level examination with a
+				focus on the Mathematics stream.
+			</p>
+		</article>
+	</div>
+</section>
+	</main>
+</Layout>
