@@ -2,46 +2,43 @@
 ---
 
 <div class="liquid-ether" aria-hidden="true">
-	<canvas></canvas>
+  <canvas></canvas>
 </div>
 
 <script>
-	import * as THREE from "three";
+  import * as THREE from 'three';
 
-	const container = document.querySelector(".liquid-ether") as HTMLElement | null;
-	const canvas = container?.querySelector("canvas") as HTMLCanvasElement | null;
+  const container = document.querySelector('.liquid-ether') as HTMLElement | null;
+  const canvas = container?.querySelector('canvas') as HTMLCanvasElement | null;
 
-	if (container && canvas) {
-		const renderer = new THREE.WebGLRenderer({
-			canvas,
-			antialias: true,
-			alpha: true,
-		});
+  if (container && canvas) {
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: true,
+      alpha: true,
+    });
 
-		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
-		renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
-		const scene = new THREE.Scene();
+    const scene = new THREE.Scene();
 
-		const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
 
-		const geometry = new THREE.PlaneGeometry(2, 2);
+    const geometry = new THREE.PlaneGeometry(2, 2);
 
-		const material = new THREE.ShaderMaterial({
-			transparent: true,
-			uniforms: {
-				uTime: { value: 0 },
-				uResolution: {
-					value: new THREE.Vector2(
-						window.innerWidth,
-						window.innerHeight,
-					),
-				},
-				uMouse: {
-					value: new THREE.Vector2(0.5, 0.5),
-				},
-			},
-			vertexShader: `
+    const material = new THREE.ShaderMaterial({
+      transparent: true,
+      uniforms: {
+        uTime: { value: 0 },
+        uResolution: {
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+        },
+        uMouse: {
+          value: new THREE.Vector2(0.5, 0.5),
+        },
+      },
+      vertexShader: `
 				varying vec2 vUv;
 
 				void main() {
@@ -49,7 +46,7 @@
 					gl_Position = vec4(position, 1.0);
 				}
 			`,
-			fragmentShader: `
+      fragmentShader: `
 				precision highp float;
 
 				uniform float uTime;
@@ -158,81 +155,78 @@
 					);
 				}
 			`,
-		});
+    });
 
-		const mesh = new THREE.Mesh(geometry, material);
-		scene.add(mesh);
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
 
-		const mouse = new THREE.Vector2(0.5, 0.5);
-		const targetMouse = new THREE.Vector2(0.5, 0.5);
+    const mouse = new THREE.Vector2(0.5, 0.5);
+    const targetMouse = new THREE.Vector2(0.5, 0.5);
 
-		const handlePointerMove = (event: PointerEvent) => {
-			targetMouse.x = event.clientX / window.innerWidth;
-			targetMouse.y = 1 - event.clientY / window.innerHeight;
-		};
+    const handlePointerMove = (event: PointerEvent) => {
+      targetMouse.x = event.clientX / window.innerWidth;
+      targetMouse.y = 1 - event.clientY / window.innerHeight;
+    };
 
-		const handleResize = () => {
-			renderer.setSize(window.innerWidth, window.innerHeight);
+    const handleResize = () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
 
-			material.uniforms.uResolution.value.set(
-				window.innerWidth,
-				window.innerHeight,
-			);
-		};
+      material.uniforms.uResolution.value.set(window.innerWidth, window.innerHeight);
+    };
 
-		window.addEventListener("pointermove", handlePointerMove, {
-			passive: true,
-		});
+    window.addEventListener('pointermove', handlePointerMove, {
+      passive: true,
+    });
 
-		window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
-		const clock = new THREE.Clock();
+    const clock = new THREE.Clock();
 
-		const animate = () => {
-			const elapsed = clock.getElapsedTime();
+    const animate = () => {
+      const elapsed = clock.getElapsedTime();
 
-			mouse.lerp(targetMouse, 0.025);
+      mouse.lerp(targetMouse, 0.025);
 
-			material.uniforms.uTime.value = elapsed;
-			material.uniforms.uMouse.value.copy(mouse);
+      material.uniforms.uTime.value = elapsed;
+      material.uniforms.uMouse.value.copy(mouse);
 
-			renderer.render(scene, camera);
+      renderer.render(scene, camera);
 
-			requestAnimationFrame(animate);
-		};
+      requestAnimationFrame(animate);
+    };
 
-		animate();
-	}
+    animate();
+  }
 </script>
 
 <style>
-	.liquid-ether {
-		position: fixed;
-		inset: 0;
-		z-index: 0;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
-		overflow: hidden;
-		background: #050505;
-	}
+  .liquid-ether {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    background: #050505;
+  }
 
-	.liquid-ether canvas {
-		display: block;
-		width: 100%;
-		height: 100%;
-		opacity: 0.85;
-	}
+  .liquid-ether canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+  }
 
-	@media (prefers-reduced-motion: reduce) {
-		.liquid-ether {
-			display: none;
-		}
-	}
+  @media (prefers-reduced-motion: reduce) {
+    .liquid-ether {
+      display: none;
+    }
+  }
 
-	@media (max-width: 600px) {
-		.liquid-ether canvas {
-			opacity: 0.5;
-		}
-	}
+  @media (max-width: 600px) {
+    .liquid-ether canvas {
+      opacity: 0.5;
+    }
+  }
 </style>
