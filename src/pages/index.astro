@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
+import LiquidEther from '../components/LiquidEther.astro';
 ---
 
 <Layout>
+	<LiquidEther />
 	<Navigation />
 
 	<main>
@@ -12,7 +14,7 @@ import Hero from '../components/Hero.astro';
 
 <section id="about" class="content-section about-section">
 	<div class="section-heading">
-		<span>01.</span>
+		<span></span>
 		<h2>About</h2>
 	</div>
 
@@ -20,7 +22,7 @@ import Hero from '../components/Hero.astro';
 		<div class="about-text">
 			<p>
 				I'm an Information Systems undergraduate at the
-				<strong>University of Colombo School of Computing</strong>,
+				<strong> University of Colombo School of Computing</strong>,
 				building a career at the intersection of business analysis
 				and software engineering.
 			</p>
@@ -38,17 +40,18 @@ import Hero from '../components/Hero.astro';
 			</p>
 
 			<p>
-				Currently, I'm working on <strong>GridX</strong>, a
-				peer-to-peer energy trading platform, where I contribute
-				as a Business Analyst, Software Engineer, and Project
-				Coordinator.
+				Currently, I'm seeking internship opportunities in
+    			<strong> Business Analysis</strong> and
+    			<strong> Software Engineering</strong>, where I can contribute
+    			to real-world projects while developing my professional and
+    			technical skills.
 			</p>
 		</div>
 
 		<div class="about-photo">
 			<div class="photo-frame">
 				<img
-	src={`${import.meta.env.BASE_URL}profile.jpeg`}
+	src={`${import.meta.env.BASE_URL}/profile.jpeg`}
 	alt="Vidurshan Ponmudy"
 />
 			</div>
@@ -58,7 +61,6 @@ import Hero from '../components/Hero.astro';
 
 		<section id="experience" class="content-section experience-section">
 	<div class="section-heading">
-		<span>02.</span>
 		<h2>Experience</h2>
 	</div>
 
@@ -67,7 +69,8 @@ import Hero from '../components/Hero.astro';
 			<div class="experience-header">
 				<div>
 					<h3>Customer Service Representative</h3>
-					<p class="experience-company">Dialog Axiata</p>
+					<p class="experience-company">Dialog Axiata PLC</p>
+					<span class="experience-date">Apr 2023 – May 2024</span>
 				</div>
 
 				<span class="experience-date">Professional Experience</span>
@@ -89,9 +92,10 @@ import Hero from '../components/Hero.astro';
 			</ul>
 
 			<div class="experience-tags">
-				<span>Customer Service</span>
+				<span>Customer Success</span>
 				<span>Problem Solving</span>
 				<span>Communication</span>
+				<span>Teamwork</span>
 			</div>
 		</article>
 	</div>
@@ -99,14 +103,13 @@ import Hero from '../components/Hero.astro';
 
 		<section id="projects" class="content-section projects-section">
 	<div class="section-heading">
-		<span>03.</span>
 		<h2>Projects</h2>
 	</div>
 
 	<!-- Featured Project -->
 	<article class="featured-project">
 		<div class="featured-project-content">
-			<p class="project-label">Featured Project</p>
+			<p class="project-label">Featured Project - Group Project</p>
 
 			<h3>GridX</h3>
 
@@ -120,22 +123,22 @@ import Hero from '../components/Hero.astro';
 				features.
 			</p>
 
-			<p class="project-role">
-				<strong>My role:</strong>
-				Business Analyst · Software Engineer · Project Coordinator
-			</p>
-
 			<div class="project-tags">
 				<span>Business Analysis</span>
+				<span>Jira</span>
+				<span>Confluence</span>
 				<span>TypeScript</span>
 				<span>Node.js</span>
 				<span>PostgreSQL</span>
 				<span>gRPC</span>
 				<span>Docker</span>
+				<span>Kafka</span>
 			</div>
 
-			<div class="project-links">
-				<a href="#" aria-label="View GridX project">
+			<div class="project-link">
+				<a href="https://github.com/p2p-energy-trading-platform" aria-label="View GridX project"
+				target="_blank"
+				rel="noopener noreferrer">
 					View project <span>↗</span>
 				</a>
 			</div>
@@ -243,7 +246,9 @@ import Hero from '../components/Hero.astro';
 		<div class="project-card-top">
 			<span class="project-number">01</span>
 			<a
-				href="#"
+				href="https://github.com/Sesandii/autonexusNew"
+				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="View AutoNexus project"
 				class="project-arrow"
 			>
@@ -252,7 +257,7 @@ import Hero from '../components/Hero.astro';
 		</div>
 
 		<div class="project-card-content">
-			<p class="project-type">BUSINESS ANALYSIS · SYSTEM DEVELOPMENT</p>
+			<p class="project-type">Group Project</p>
 
 			<h3>AutoNexus</h3>
 
@@ -266,8 +271,9 @@ import Hero from '../components/Hero.astro';
 
 			<div class="project-tags">
 				<span>Business Analysis</span>
+				<span>BPMN</span>
 				<span>PHP</span>
-				<span>MariaDB</span>
+				<span>MYSQL</span>
 				<span>HTML/CSS/JS</span>
 			</div>
 		</div>
@@ -290,7 +296,7 @@ import Hero from '../components/Hero.astro';
 		</div>
 
 		<div class="project-card-content">
-			<p class="project-type">SOFTWARE ENGINEERING · ARCHITECTURE</p>
+			<p class="project-type">Group Project</p>
 
 			<h3>SwiftLogistics</h3>
 
@@ -306,6 +312,7 @@ import Hero from '../components/Hero.astro';
 				<span>Middleware</span>
 				<span>Architecture</span>
 				<span>APIs</span>
+				<span>Docker</span>
 			</div>
 		</div>
 	</article>
@@ -316,7 +323,9 @@ import Hero from '../components/Hero.astro';
 			<span class="project-number">03</span>
 
 			<a
-				href="#"
+				href="https://github.com/MessedUp5/zovro-ride-sharing"
+				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="View Zovro project"
 				class="project-arrow"
 			>
@@ -325,11 +334,11 @@ import Hero from '../components/Hero.astro';
 		</div>
 
 		<div class="project-card-content">
-			<p class="project-type">SOFTWARE ENGINEERING</p>
+			<p class="project-type">Individual Project</p>
 
 			<h3>Zovro</h3>
 
-			<h4>Software Project</h4>
+			<h4>Ride-Hailing Platform</h4>
 
 			<p>
 				A software engineering project focused on designing
@@ -338,8 +347,11 @@ import Hero from '../components/Hero.astro';
 			</p>
 
 			<div class="project-tags">
-				<span>Software Engineering</span>
-				<span>System Design</span>
+				<span>React</span>
+				<span>Node.js</span>
+				<span>PostgreSQL</span>
+				<span>Firebase</span>
+				<span>Vercel</span>
 			</div>
 		</div>
 	</article>
@@ -349,7 +361,6 @@ import Hero from '../components/Hero.astro';
 
 		<section id="skills" class="content-section skills-section">
 	<div class="section-heading">
-		<span>04.</span>
 		<h2>Skills</h2>
 	</div>
 
@@ -365,24 +376,16 @@ import Hero from '../components/Hero.astro';
 
 		<article class="skill-group skill-group-primary">
 			<div class="skill-group-header">
-				<span class="skill-number">01</span>
 				<span class="skill-label">CORE</span>
 			</div>
 
 			<h3>Business Analysis</h3>
 
-			<p class="skill-description">
-				Translating business needs into structured requirements
-				and practical system solutions.
-			</p>
-
 			<div class="skill-list">
 				<span>Requirements Elicitation</span>
-				<span>Requirements Engineering</span>
 				<span>User Stories</span>
 				<span>Acceptance Criteria</span>
 				<span>Process Mapping</span>
-				<span>Workflow Analysis</span>
 				<span>Functional Specifications</span>
 				<span>UML & BPMN</span>
 			</div>
@@ -391,16 +394,11 @@ import Hero from '../components/Hero.astro';
 
 		<article class="skill-group">
 			<div class="skill-group-header">
-				<span class="skill-number">02</span>
 				<span class="skill-label">TECHNICAL</span>
 			</div>
 
 			<h3>Software Engineering</h3>
 
-			<p class="skill-description">
-				Building software solutions and implementing technical
-				requirements across different application layers.
-			</p>
 
 			<div class="skill-list">
 				<span>TypeScript / JavaScript</span>
@@ -417,42 +415,30 @@ import Hero from '../components/Hero.astro';
 
 		<article class="skill-group">
 			<div class="skill-group-header">
-				<span class="skill-number">03</span>
 				<span class="skill-label">DATA & SYSTEMS</span>
 			</div>
 
 			<h3>Data & Infrastructure</h3>
 
-			<p class="skill-description">
-				Working with databases, development infrastructure,
-				APIs, and distributed application environments.
-			</p>
 
 			<div class="skill-list">
 				<span>PostgreSQL</span>
-				<span>MySQL / MariaDB</span>
+				<span>MySQL</span>
 				<span>Docker</span>
 				<span>Kafka</span>
 				<span>Git & GitHub</span>
 				<span>Linux</span>
-				<span>API Integration</span>
-				<span>Distributed Systems</span>
 			</div>
 		</article>
 
 
 		<article class="skill-group">
 			<div class="skill-group-header">
-				<span class="skill-number">04</span>
 				<span class="skill-label">WORKFLOW</span>
 			</div>
 
 			<h3>Tools & Methodologies</h3>
 
-			<p class="skill-description">
-				Tools and practices used to plan, document, collaborate,
-				and deliver software projects.
-			</p>
 
 			<div class="skill-list">
 				<span>Agile / Scrum</span>
@@ -469,9 +455,8 @@ import Hero from '../components/Hero.astro';
 	</div>
 </section>
 
-		<section id="education" class="content-section education-section">
+<section id="education" class="content-section education-section">
 	<div class="section-heading">
-		<span>05.</span>
 		<h2>Education</h2>
 	</div>
 
@@ -494,9 +479,18 @@ import Hero from '../components/Hero.astro';
 				business analysis, systems analysis and design, databases,
 				and information technology.
 			</p>
+
+			<div class="education-highlights">
+				<p>
+					<strong>Leadership & Activities:</strong>
+					<strong> Treasurer</strong> of the Rotaract Club of UCSC, with prior experience
+					as a Professional Development Committee Member. Participated
+					in Rowing, Scrabble, and Hockey during the Freshers' period.
+				</p>
+			</div>
 		</article>
 
-		<!-- School -->
+		<!-- G.C.E. Advanced Level -->
 		<article class="education-item">
 			<div class="education-header">
 				<div>
@@ -513,8 +507,36 @@ import Hero from '../components/Hero.astro';
 				Completed the G.C.E. Advanced Level examination with a
 				focus on the Mathematics stream.
 			</p>
+
+			<div class="education-highlights">
+				<p>
+					<strong>Activities: </strong>
+					Represented the school in hockey and served as a school prefect.
+				</p>
+			</div>
+		</article>
+
+		<!-- G.C.E. Ordinary Level -->
+		<article class="education-item">
+			<div class="education-header">
+				<div>
+					<h3>G.C.E. Ordinary Level</h3>
+					<p class="education-institution">
+						Hindu College Colombo
+					</p>
+				</div>
+
+				<span class="education-date">2018</span>
+			</div>
+
+			<p class="education-description">
+				Completed the G.C.E. Ordinary Level examination.
+			</p>
 		</article>
 	</div>
 </section>
+<footer class="site-footer">
+	<p>© 2026 Vidurshan Ponmudy. All rights reserved.</p>
+</footer>
 	</main>
 </Layout>
