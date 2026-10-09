@@ -1,5 +1,6 @@
 <nav class="navigation">
-  <div class="nav-content">
+  <!-- Desktop Sidebar -->
+  <div class="nav-content desktop-navigation">
     <a href="#home" class="brand">
       <span class="brand-name">
         <span>VIDURSHAN</span>
@@ -47,7 +48,7 @@
           title="LinkedIn"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.34 7.4a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45h3.57V8.98H3.56v11.47H3.56Z" />
+            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.34 7.4a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45h3.57V8.98H3.56v11.47H3.56Z" />
           </svg>
         </a>
 
@@ -59,4 +60,108 @@
       </div>
     </div>
   </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-navigation">
+    <div class="mobile-header">
+      <a href="#home" class="mobile-brand">
+        <span>VIDURSHAN</span>
+        <span>PONMUDY</span>
+      </a>
+
+      <button
+        class="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+      </div>
+
+      <div class="mobile-menu-bottom">
+        <a
+          href={`${import.meta.env.BASE_URL}/Vidurshan%20Ponmudy%20CV.pdf`}
+          class="cv-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download CV
+          <span>↓</span>
+        </a>
+
+        <div class="social-links">
+          <a
+            href="https://github.com/MessedUp5"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.167 6.839 9.489.5.092.682-.217.682-.483 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.091-.647.35-1.087.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.57 9.57 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.744 0 .268.18.58.688.482A10.001 10.001 0 0 0 22 12C22 6.477 17.523 2 12 2Z" />
+            </svg>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/vidurshan-ponmudy"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.34 7.4a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.56 20.45h3.57V8.98h3.57v11.47H3.56Z" />
+            </svg>
+          </a>
+
+          <a href="mailto:vidurshan145@gmail.com" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
+
+<script>
+  const menuButton = document.querySelector('.mobile-menu-button') as HTMLButtonElement | null;
+
+  const mobileMenu = document.querySelector('.mobile-menu') as HTMLElement | null;
+
+  const mobileLinks = document.querySelectorAll('.mobile-menu a[href^="#"]');
+
+  menuButton?.addEventListener('click', () => {
+    const isOpen = mobileMenu?.classList.toggle('is-open') ?? false;
+
+    menuButton.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute(
+      'aria-label',
+      isOpen ? 'Close navigation menu' : 'Open navigation menu'
+    );
+  });
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.remove('is-open');
+      menuButton?.classList.remove('is-open');
+      menuButton?.setAttribute('aria-expanded', 'false');
+      menuButton?.setAttribute('aria-label', 'Open navigation menu');
+    });
+  });
+</script>
